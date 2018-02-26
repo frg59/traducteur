@@ -30,12 +30,12 @@ public class TranslateService {
 				String[] item = line.split(",");
 				TranslateItem it = new TranslateItem(item[0], item[1]);
 				translateItems.add(it);
-				System.out.println(it.toString());
+//				System.out.println(it.toString());
 				line = br.readLine();
 			}
 		} catch (IOException e) {
 		}
-
+		System.out.println("dico loaded");
 	}
 
 }

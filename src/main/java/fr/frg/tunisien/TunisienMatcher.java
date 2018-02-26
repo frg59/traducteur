@@ -7,11 +7,8 @@ public class TunisienMatcher {
 	private String a;
 	private String b;
 
-	public static boolean checkMatch(String a, String b) {
-		TunisienMatcher m = new TunisienMatcher();
-		m.setA(a);
-		m.setB(b);
-		return m.match();
+	public boolean match() {
+		return checkMatch(this.getA(), this.getB());
 	}
 
 	public String getA() {
@@ -30,7 +27,7 @@ public class TunisienMatcher {
 		this.b = b;
 	}
 
-	public boolean match() {
+	public static boolean checkMatch(String a, String b) {
 		a = clean(a);
 		b = clean(b);
 
@@ -43,8 +40,6 @@ public class TunisienMatcher {
 		pat = pat.replace("e", "REGLEEIA");
 		pat = pat.replace("i", "REGLEEI");
 		pat = pat.replace("a", "REGLEAZZ");
-
-		pat = pat.replace("2", "");
 
 		pat = pat.replace("5", "REGLER");
 		pat = pat.replace("gh", "REGLER");
@@ -68,12 +63,11 @@ public class TunisienMatcher {
 
 		pat = pat.replace("REGLEEIA", "[eia]");
 		pat = pat.replace("REGLEEI", "[ei]");
-//		pat = pat.replace("REGLEAZZ", "[a3]");
+		// pat = pat.replace("REGLEAZZ", "[a3]");
 		pat = pat.replace("REGLEAZZ", "([a|e|3]|(3a))");
 
 		pat = pat.replace("REGLEK", "[9k]");
 
-		// pat = pat.replace("REGLE2", "2{0,1}");
 		pat = pat.replace("REGLER", "(([5|r]|(gh))|(kh))");
 
 		pat = pat.replace("REGLES", "(s|(ss))");
@@ -85,7 +79,7 @@ public class TunisienMatcher {
 		return Pattern.matches(pat, b);
 	}
 
-	private String clean(String input) {
+	private static String clean(String input) {
 		input = input.toLowerCase();
 		input = input.replace("2", "");
 		input = input.replace("é", "e");

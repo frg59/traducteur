@@ -17,7 +17,7 @@ public class TranslateService {
 				return translateItem.getTranslation();
 			}
 		}
-		return " ? ";
+		return " *"+word+"* ";
 	}
 
 	public static void load() {

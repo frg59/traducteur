@@ -1,6 +1,9 @@
 chna7welek,comment vas tu
 3aslema,bonjour
+Beslama,Au revoir
 labess,ca va
+Mar7be,bienvenue
+fadhlek,s il te plait
 behi,ok
 ena,je
 enti,tu
@@ -17,15 +20,31 @@ m3akom,avec vous
 m3ahom,avec eux
 wa9tech,quand
 le,non
-barcha,beaucoup
-kbir,grand
-sghir,petit
-bnine,bon
-besif,de force
+barcha,beaucoup,adv
+kbir,grand	,adj
+sghir,petit,adj
+sghira,petite,adj
+Mezyen,beau,adj
+Mezyena,belle,adj
+bnin,bon,adj
+bnina,bonne,adj
+Batti2,lent,adj
+Te3eb,datiguee
+Tayeb,gentil,adj
+Sahel,facile,adj
+S3ib,difficile,adj
+Ndhif,propre,adj
+Mwasa5,sale,adj
+Cheb,jeune,adj
+9dim,vieux,adj
+Sari3,rapide,adj
+S5oun,chaud,adj
+bared,froid,adj
+besif,de force,adj
 w,et
 chwaya,peu
 bichaya,doucement
-nemchi,je vais
+nemchi,je vais,verbS1s
 tmenchi,tu vas
 ymenchi,il va
 nemchiw, nous allons
@@ -40,8 +59,8 @@ Tord9odou,vous dormez
 Yor9odou, ils dorment
 mouch,pas
 mochkel, probleme
-choukrane,merci
-3ycheck,merci
+choukran,merci
+3ychek,merci
 jaw,ambiance
 brabbi,s il te plait
 ama,mais
@@ -56,3 +75,48 @@ fi, dans
 fil,dans
 3andek, tu as
 3andi, j'ai
+bekri,tot
+yezzi,assez
+Matar,aeroport
+Maghaza,magasin
+Outil,hotel
+Ma7ata,gare
+Cinima,cinema
+Madressa,ecole
+Mat3am,restaurant
+Jeme3,mosque
+Montazah,parc
+Chare3,rue
+Bléd,ville
+Chatt,plage
+Sou9,marche/souk
+Zazzar,boucher
+7ana,bar
+Cawech,boulangerie
+7out,poisson
+Ghodwa,demain
+tawa,maintenant
+berah,hier
+Nhar,jour
+lil, nuit
+Chahr,mois
+3am,annee
+Da9i9a,minute
+Thania,seconde
+Sbe7,matin
+3achia,apres midi
+Sahriya,soiree
+5dem,travailler,verb
+ne5dem,je travaille
+baba,papa,nomFR
+omi,maman,nom
+om,maman,nom
+O5t,soeur,nom
+weld,fils,nom
+Jom3a,vendredi
+5amis,jeudi
+thnin,lundi
+Thoulatha,mardi
+A7ad,dimanche
+Sebt,samedi
+Erbeha,mercredi

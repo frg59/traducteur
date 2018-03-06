@@ -36,12 +36,42 @@ public class Temps {
 
 	public static Temps buildPosessif() {
 		Temps present = new Temps();
-		present.getConjItems().add(new ConjItem("", "i", "mon/ma ", ""));
-		present.getConjItems().add(new ConjItem("", "ek", "ton/ta ", ""));
-		present.getConjItems().add(new ConjItem("", "a", "son/sa ", ""));
-		present.getConjItems().add(new ConjItem("", "na", "son ", ""));
-		present.getConjItems().add(new ConjItem("", "kom", "votre ", ""));
-		present.getConjItems().add(new ConjItem("", "hom", "leur ", ""));
+		present.getConjItems().add(new ConjItem("", "i", "mon/ma ", "")); //1s
+		present.getConjItems().add(new ConjItem("", "ya", "mon/ma ", "")); //1s
+		present.getConjItems().add(new ConjItem("", "ek", "ton/ta ", "")); //2s
+		present.getConjItems().add(new ConjItem("", "k", "ton/ta ", "")); //2s
+		present.getConjItems().add(new ConjItem("", "ou", "son/sa ", "")); //3s m
+		present.getConjItems().add(new ConjItem("", "ha", "son/sa ", "")); //3s f
+		present.getConjItems().add(new ConjItem("", "na", "son ", "")); //1p
+		present.getConjItems().add(new ConjItem("", "kom", "votre ", "")); //2p
+		present.getConjItems().add(new ConjItem("", "hom", "leur ", "")); // 3p
+		return present;
+	}
+	
+	public static Temps buildCO() {
+		Temps present = new Temps();
+		present.getConjItems().add(new ConjItem("", "ni", "", " moi ")); //1s
+		present.getConjItems().add(new ConjItem("", "ek", "", " toi ")); //2s
+		present.getConjItems().add(new ConjItem("", "k", "", " toi ")); //2s
+		present.getConjItems().add(new ConjItem("", "ou", "", " lui ")); //3s m
+		present.getConjItems().add(new ConjItem("", "ha", "", " elle ")); //3s f
+		present.getConjItems().add(new ConjItem("", "na", "", " nous ")); //1p
+		present.getConjItems().add(new ConjItem("", "kom", "", " vous ")); //2p
+		present.getConjItems().add(new ConjItem("", "hom", " ", " ils")); // 3p
+		return present;
+	}
+	
+	public static Temps buidAdv() {
+		Temps present = new Temps();
+		present.getConjItems().add(new ConjItem("", "i", "mon/ma ", "")); //1s
+		present.getConjItems().add(new ConjItem("", "ya", "mon/ma ", "")); //1s
+		present.getConjItems().add(new ConjItem("", "ek", "ton/ta ", "")); //2s
+		present.getConjItems().add(new ConjItem("", "k", "ton/ta ", "")); //2s
+		present.getConjItems().add(new ConjItem("", "h", "son/sa ", "")); //3s m
+		present.getConjItems().add(new ConjItem("", "ha", "son/sa ", "")); //3s f
+		present.getConjItems().add(new ConjItem("", "na", "son ", "")); //1p
+		present.getConjItems().add(new ConjItem("", "kom", "votre ", "")); //2p
+		present.getConjItems().add(new ConjItem("", "hom", "leur ", "")); // 3p
 		return present;
 	}
 

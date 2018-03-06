@@ -56,6 +56,9 @@ public class RegExMatcher {
 
 		pat = pat.replace("ss", "REGLES");
 		pat = pat.replace("s", "REGLES");
+		
+		pat = pat.replace("bb", "REGLEB");
+		pat = pat.replace("b", "REGLEB");
 
 		pat = pat.replace("7", "REGLEH");
 		pat = pat.replace("hh", "REGLEH");
@@ -85,6 +88,8 @@ public class RegExMatcher {
 		pat = pat.replace("REGLEW", buildRegex("w", "ou", "o"));
 		
 		pat = pat.replace("REGLET", buildRegex("t", "tt"));
+		
+		pat = pat.replace("REGLEB", buildRegex("b", "bb"));
 
 		return Pattern.matches(pat, b);
 	}

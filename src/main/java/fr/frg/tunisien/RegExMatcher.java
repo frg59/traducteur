@@ -2,7 +2,7 @@ package fr.frg.tunisien;
 
 import java.util.regex.Pattern;
 
-public class TunisienMatcher {
+public class RegExMatcher {
 
 	private String a;
 	private String b;
@@ -37,15 +37,20 @@ public class TunisienMatcher {
 		// ----- scan sound to replace
 		pat = pat.replace("3a", "REGLEAZZ");
 		pat = pat.replace("3", "REGLEAZZ");
-		pat = pat.replace("e", "REGLEEIA");
-		pat = pat.replace("i", "REGLEEI");
 		pat = pat.replace("a", "REGLEAZZ");
+		
+		pat = pat.replace("e", "REGLEEIA");
+		
+		pat = pat.replace("i", "REGLEEI");
 
+
+		pat = pat.replace("rr", "REGLER");
 		pat = pat.replace("5", "REGLER");
 		pat = pat.replace("gh", "REGLER");
 		pat = pat.replace("kh", "REGLER");
 		pat = pat.replace("r", "REGLER");
 
+		pat = pat.replace("kk", "REGLEK");
 		pat = pat.replace("k", "REGLEK");
 		pat = pat.replace("9", "REGLEK");
 
@@ -57,24 +62,29 @@ public class TunisienMatcher {
 		pat = pat.replace("h", "REGLEH");
 
 		pat = pat.replace("ou", "REGLEW");
+		pat = pat.replace("o", "REGLEW");
 		pat = pat.replace("w", "REGLEW");
+
+		pat = pat.replace("t", "REGLET");
+		pat = pat.replace("tt", "REGLET");
 
 		// -------------------------regex
 
-		pat = pat.replace("REGLEEIA", "[eia]");
-		pat = pat.replace("REGLEEI", "[ei]");
-		// pat = pat.replace("REGLEAZZ", "[a3]");
-		pat = pat.replace("REGLEAZZ", "([a|e|3]|(3a))");
+		pat = pat.replace("REGLEEIA", buildRegex("e", "a", "i"));
+		pat = pat.replace("REGLEEI", buildRegex("e", "i"));
+		pat = pat.replace("REGLEAZZ", buildRegex("e", "a", "3", "3a"));
 
-		pat = pat.replace("REGLEK", "[9k]");
+		pat = pat.replace("REGLEK", buildRegex("9", "k", "kk"));
 
-		pat = pat.replace("REGLER", "(([5|r]|(gh))|(kh))");
+		pat = pat.replace("REGLER", buildRegex("5", "r", "rr", "gh", "kh"));
 
-		pat = pat.replace("REGLES", "(s|(ss))");
+		pat = pat.replace("REGLES", buildRegex("s", "ss"));
 
-		pat = pat.replace("REGLEH", "(7|h|(hh))");
+		pat = pat.replace("REGLEH", buildRegex("7", "h", "hh"));
 
-		pat = pat.replace("REGLEW", "(w|(ou))");
+		pat = pat.replace("REGLEW", buildRegex("w", "ou", "o"));
+		
+		pat = pat.replace("REGLET", buildRegex("t", "tt"));
 
 		return Pattern.matches(pat, b);
 	}
@@ -84,7 +94,20 @@ public class TunisienMatcher {
 		input = input.replace("2", "");
 		input = input.replace("é", "e");
 		input = input.replace("è", "e");
+		input = input.replace("-", "");
 		return input;
+	}
+
+	public static String buildRegex(String... params) {
+		String res = "";
+		for (String string : params) {
+			if ("".equals(res)) {
+				res = "(" + string + ")";
+			} else {
+				res = "(" + res + "|(" + string + "))";
+			}
+		}
+		return res;
 	}
 
 }
